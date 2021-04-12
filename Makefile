@@ -6,7 +6,7 @@
 #    By: vifernan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 19:55:57 by vifernan          #+#    #+#              #
-#    Updated: 2021/04/09 11:12:30 by vifernan         ###   ########.fr        #
+#    Updated: 2021/04/12 17:03:13 by vifernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ CFLAGS	= -Wall -Wextra -Werror
 
 SRCS	= ft_atoi.c \
 		  ft_bzero.c \
+		  ft_calloc.c \
 		  ft_isalnum.c \
 		  ft_isalpha.c \
 		  ft_isascii.c \
@@ -35,6 +36,11 @@ SRCS	= ft_atoi.c \
 		  ft_strrchr.c \
 		  ft_tolower.c \
 		  ft_toupper.c \
+		  ft_strlcat.c \
+		  ft_strdup.c \
+		  ft_substr.c \
+		  ft_strjoin.c \
+		  ft_strtrim.c \
 
 OBJS	= $(SRCS:.c=.o)
 

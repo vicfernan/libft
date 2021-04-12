@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/06 17:27:36 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/12 13:04:40 by vifernan         ###   ########.fr       */
+/*   Created: 2021/04/12 13:08:38 by vifernan          #+#    #+#             */
+/*   Updated: 2021/04/12 13:25:28 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*d;
-	const char		*s;
-	size_t			i;
+	char	*str;
 
-	d = dst;
-	s = src;
-	i = 0;
-	while (i < n)
-	{
-		d[i] = s[i];
-		if (d[i] == (unsigned char) c)
-			return (dst + i +1);
-		i++;
-	}
-	return (0);
+	str = (char *)malloc(count * size);
+	if (str == 0)
+		return (0);
+	ft_bzero(str, (count * size));
+	return (str);
 }
