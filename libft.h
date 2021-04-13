@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 15:43:49 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/12 17:08:59 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/13 12:02:51 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 # include <stdlib.h>
 # include <string.h>
 # include <ctype.h>
+# include <unistd.h>
 
 int				ft_atoi(char *str);
-void			*ft_bzero(void *s, size_t n);
+void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t count, size_t size);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
@@ -44,5 +45,9 @@ size_t			ft_strlcat(char *dst, const char *src, size_t n);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s, char const *set);
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 #endif
