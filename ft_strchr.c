@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:25:39 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/12 17:44:54 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/13 13:37:31 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,9 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
+/*
+int main ()
+{
+	char	str3[] = "";
+	printf("%s", ft_strchr(str3, '\0'));
+}*/

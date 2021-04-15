@@ -6,7 +6,7 @@
 #    By: vifernan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 19:55:57 by vifernan          #+#    #+#              #
-#    Updated: 2021/04/13 12:03:08 by vifernan         ###   ########.fr        #
+#    Updated: 2021/04/15 13:57:42 by vifernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRCS	= ft_atoi.c \
 		  ft_putstr_fd.c \
 		  ft_putendl_fd.c \
 		  ft_putnbr_fd.c \
+		  ft_split.c \
 
 OBJS	= $(SRCS:.c=.o)
 
@@ -60,11 +61,10 @@ $(NAME):
 clean:
 	rm -f $(OBJS)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
-re:
-	fclean all
+re: fclean all
 
 .PHONY: 
 	all clean fclean

@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 08:48:51 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/13 11:09:21 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/15 17:29:15 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(char *str)
 {
-	int 				i;
+	int					i;
 	int					p;
 	unsigned long long	num;
 

@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 11:25:37 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/12 13:14:41 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/15 19:43:25 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strdup(const char *s1)
 	char	*dst;
 
 	i = ft_strlen(s1);
-	if (!(dst = (char *)malloc(sizeof(char) * (i + 1))))
-		return (0);
 	dst = (char *) malloc(i + 1);
+	if (!dst)
+		return (0);
 	j = 0;
 	while (s1[j] != '\0')
 	{
