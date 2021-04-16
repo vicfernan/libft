@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 16:34:20 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/15 19:37:05 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/16 14:04:41 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ char	*ft_strnstr(const char *hay, const char *ne, size_t len)
 	}
 	return (0);
 }
-
+/*
 int main()
 {
 	char *a = "Hola como estas";
 	char *b = "";
 
 	printf("%s\n", ft_strnstr(a, b, 0));
-}
+}*/

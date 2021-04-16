@@ -6,7 +6,7 @@
 #    By: vifernan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 19:55:57 by vifernan          #+#    #+#              #
-#    Updated: 2021/04/15 13:57:42 by vifernan         ###   ########.fr        #
+#    Updated: 2021/04/16 17:17:51 by vifernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ SRCS	= ft_atoi.c \
 		  ft_putendl_fd.c \
 		  ft_putnbr_fd.c \
 		  ft_split.c \
+		  ft_itoa.c \
 
 OBJS	= $(SRCS:.c=.o)
 

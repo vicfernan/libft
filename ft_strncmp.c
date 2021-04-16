@@ -6,12 +6,11 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 11:38:06 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/13 16:41:59 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/16 14:00:02 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -30,14 +29,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int main()
-{
-	char	*s1 = "";
-	char	*s2 = "AAAAAA";
-	printf("%d\n", ft_strncmp(s1, s2, 6));
-	
-	char	*s3 = "";
-	char	*s4 = "AAAAAA";
-	printf("%d\n", strncmp(s3, s4, 6));
-}*/
