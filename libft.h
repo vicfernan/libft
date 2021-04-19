@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 15:43:49 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/16 17:20:08 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/19 12:20:06 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strdup(const char *s1);
-size_t			ft_strlcpy(char *dest, char *src, unsigned int size);
+size_t			ft_strlcpy(char *dest, const char *src, unsigned int size);
 size_t			ft_strlen(const char *str);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *hay, const char *ne, size_t len);
@@ -52,5 +52,6 @@ void			ft_putnbr_fd(int n, int fd);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

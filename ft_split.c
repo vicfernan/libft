@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 17:30:23 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/16 17:16:09 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:27:38 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 size_t	ft_returni(char c, const char *s, size_t i)
 {
-	size_t	j;
-	char	*str;
 	size_t	size;
 
 	size = 0;
@@ -24,12 +22,9 @@ size_t	ft_returni(char c, const char *s, size_t i)
 		size++;
 		i++;
 	}
-	str = ft_calloc(size + 1, sizeof(char));
 	i = i - size;
-	j = 0;
 	while (size--)
-		str[j++] = s[i++];
-	str[j] = '\0';
+		i++;
 	return (i);
 }
 
@@ -54,6 +49,24 @@ char	*ft_str(char c, const char *s, size_t i)
 	return (str);
 }
 
+size_t	ft_Tabsize(char const *s, char c)
+{
+	size_t	i;
+	size_t	p;
+
+	i = 0;
+	p = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c)
+			i++;
+		if ((s[i] != c && s[i + 1] == c) || (s[i] != c && s[i + 1] == '\0'))
+			p++;
+		i++;
+	}
+	return (p);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -63,7 +76,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	tab = ft_calloc(ft_strlen(s) + 1, sizeof(char *)); //tamaño de t * 8;
+	tab = ft_calloc(ft_Tabsize(s, c) + 1, sizeof(char *));
 	if (!tab)
 		return (0);
 	i = 0;
@@ -82,3 +95,16 @@ char	**ft_split(char const *s, char c)
 	}
 	return (tab);
 }
+/*
+int main()
+{
+	char *s = "::::::::::::zero:::::::hola:kjkgfd:::::::\n::::::::d::::";
+
+	char **t = ft_split(s, ':');
+	printf("---------final---------%s\n", t[0]);
+	printf("---------final---------%s\n", t[1]);
+	printf("---------final---------%s\n", t[2]);
+	printf("---------final---------%s\n", t[3]);
+	printf("---------final---------%s\n", t[4]);
+	printf("---------final---------%s\n", t[5]);
+}*/

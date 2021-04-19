@@ -1,59 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 13:27:13 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/19 16:33:45 by vifernan         ###   ########.fr       */
+/*   Created: 2021/04/19 11:49:16 by vifernan          #+#    #+#             */
+/*   Updated: 2021/04/19 16:33:08 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_exactsize(char const *s, unsigned int start, size_t len)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	while (s[i] != '\0')
-	{
-		if (i >= start && j < len)
-			j++;
-		i++;
-	}
-	return (j);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	size_t	i;
-	size_t	j;
+	int		i;
 
 	if (!s)
 		return (0);
-	str = malloc(sizeof(char) * (ft_exactsize(s, start, len) + 1));
+	str = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!str)
 		return (0);
-	j = 0;
 	i = 0;
-	while (s[j] != '\0')
+	while (s[i] != '\0')
 	{
-		if (j >= start && i < len)
-			str[i++] = s[j];
-		j++;
+		str[i] = f(i, s[i]);
+		i++;
 	}
 	str[i] = '\0';
 	return (str);
 }
 /*
+char my_func(unsigned int i, char str)
+{
+	printf("My inner function: index = %d and %c\n", i, str);
+ 	return str - 32;
+}
+
 int main()
 {
-	char *a = "i just want this part #############";
-
-	printf("%s\n", ft_substr(a, 5, 20));
+ 	char *str = "hello ?       a      ";
+ 	printf("The result is %s\n", str);
+ 	char *result = ft_strmapi(str, my_func);
+ 	printf("The result is %s\n", result);
+ 	return 0;
 }*/

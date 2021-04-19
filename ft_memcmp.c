@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 13:24:01 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/13 16:36:34 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/19 14:12:02 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned const char	*s11;
 	unsigned const char	*s22;
-	size_t		i;
+	size_t				i;
 
 	s11 = s1;
 	s22 = s2;

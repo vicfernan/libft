@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 11:16:40 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/16 13:53:18 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:47:15 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,20 @@ size_t	ft_size(int nb)
 	return (i);
 }
 
+int	ft_isnegative(int nb)
+{
+	if (nb < 0)
+		nb *= -1;
+	return (nb);
+}
+
+char	ft_negative(int nb, char *str)
+{
+	if (nb < 0)
+		str[0] = '-';
+	return (str[0]);
+}
+
 char	*ft_itoa(int nb)
 {
 	char	*str;
@@ -47,8 +61,8 @@ char	*ft_itoa(int nb)
 	flag = 0;
 	if (nb == -2147483648 && nb++)
 		flag++;
-	if (nb < 0 && (nb *= -1))
-		str[0] = '-';
+	str[0] = ft_negative(nb, str);
+	nb = ft_isnegative(nb);
 	while (nb > 9)
 	{
 		if (flag == 1 && flag--)
