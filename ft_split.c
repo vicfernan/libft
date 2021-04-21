@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 17:30:23 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/19 16:27:38 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/21 15:39:57 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_returni(char c, const char *s, size_t i)
 	size_t	size;
 
 	size = 0;
-	while (s[i] != c && s[i] != '\0')
+	while (i < ft_strlen(s) && s[i] != c)
 	{
 		size++;
 		i++;
@@ -35,12 +35,14 @@ char	*ft_str(char c, const char *s, size_t i)
 	size_t	size;
 
 	size = 0;
-	while (s[i] != c && s[i] != '\0')
+	while (i < ft_strlen(s) && s[i] != c)
 	{
 		size++;
 		i++;
 	}
-	str = ft_calloc(size + 1, sizeof(char));
+	str = malloc((size + 1) * sizeof(char));
+	if (!str)
+		return (0);
 	i = i - size;
 	j = 0;
 	while (size--)
@@ -52,19 +54,21 @@ char	*ft_str(char c, const char *s, size_t i)
 size_t	ft_Tabsize(char const *s, char c)
 {
 	size_t	i;
-	size_t	p;
+	size_t	z;
 
 	i = 0;
-	p = 0;
-	while (s[i] != '\0')
+	z = 0;
+	while (i < ft_strlen(s))
 	{
-		while (s[i] == c)
-			i++;
-		if ((s[i] != c && s[i + 1] == c) || (s[i] != c && s[i + 1] == '\0'))
-			p++;
+		if (s[i] != c && s[i] != '\0')
+		{
+			while (s[i] != c && s[i] != '\0')
+				i++;
+			z++;
+		}
 		i++;
 	}
-	return (p);
+	return (z);
 }
 
 char	**ft_split(char const *s, char c)
@@ -76,35 +80,21 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	tab = ft_calloc(ft_Tabsize(s, c) + 1, sizeof(char *));
+	tab = ft_calloc((ft_Tabsize(s, c) + 1), sizeof(char *));
 	if (!tab)
 		return (0);
 	i = 0;
 	t = 0;
-	while (s[i] != '\0')
+	while (i < ft_strlen(s))
 	{
 		while (s[i] == c)
 			i++;
 		size = 0;
-		if (i < strlen(s))
+		if (t < ft_Tabsize(s, c))
 		{
-			tab[t] = ft_str(c, s, i);
+			tab[t++] = ft_str(c, s, i);
 			i = ft_returni(c, s, i);
-			t++;
 		}
 	}
 	return (tab);
 }
-/*
-int main()
-{
-	char *s = "::::::::::::zero:::::::hola:kjkgfd:::::::\n::::::::d::::";
-
-	char **t = ft_split(s, ':');
-	printf("---------final---------%s\n", t[0]);
-	printf("---------final---------%s\n", t[1]);
-	printf("---------final---------%s\n", t[2]);
-	printf("---------final---------%s\n", t[3]);
-	printf("---------final---------%s\n", t[4]);
-	printf("---------final---------%s\n", t[5]);
-}*/

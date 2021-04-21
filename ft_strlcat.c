@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 11:05:27 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/19 14:13:27 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/20 10:51:54 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	size_t	i;
 	size_t	j;
 
-	i = 0;
 	j = 0;
-	while (dst[i] != '\0')
-		i++;
+	i = ft_strlen(dst);
 	if (i > n)
 	{
 		while (src[j] != '\0')

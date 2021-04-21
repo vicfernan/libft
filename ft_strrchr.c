@@ -27,11 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-/*
-int main()
-{
-	char	*src = "abbbbbbbb";
-	printf("%s\n", ft_strrchr(src, 'b'));
-	char	*src1 = "abbbbbbbb";
-	printf("%s\n", strrchr(src1, 'b'));
-}*/

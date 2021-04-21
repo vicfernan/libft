@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 11:16:40 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/19 16:47:15 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/21 13:13:30 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,3 @@ char	*ft_itoa(int nb)
 	str[i] = nb + 48;
 	return (str);
 }
-/*
-int main(void)
-{
-	printf("%s\n", ft_itoa(0));
-	return (0);
-}*/

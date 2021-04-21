@@ -6,7 +6,7 @@
 #    By: vifernan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 19:55:57 by vifernan          #+#    #+#              #
-#    Updated: 2021/04/19 12:20:36 by vifernan         ###   ########.fr        #
+#    Updated: 2021/04/21 16:23:15 by vifernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,6 @@ all: $(NAME)
 $(NAME):
 	gcc -c $(CFLAGS) -I $(HEADER) $(SRCS)
 	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
 
 clean:
 	rm -f $(OBJS)
@@ -68,5 +67,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: 
-	all clean fclean
+.PHONY: all clean fclean re

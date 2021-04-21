@@ -31,9 +31,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
-/*
-int main ()
-{
-	char	str3[] = "";
-	printf("%s", ft_strchr(str3, '\0'));
-}*/

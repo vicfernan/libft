@@ -33,11 +33,3 @@ char	*ft_strnstr(const char *hay, const char *ne, size_t len)
 	}
 	return (0);
 }
-/*
-int main()
-{
-	char *a = "Hola como estas";
-	char *b = "";
-
-	printf("%s\n", ft_strnstr(a, b, 0));
-}*/

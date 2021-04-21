@@ -6,16 +6,13 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 15:43:49 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/19 12:20:06 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/21 16:26:15 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
-# include <ctype.h>
 # include <unistd.h>
 
 int				ft_atoi(const char *str);

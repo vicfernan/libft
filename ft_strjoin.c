@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 16:08:16 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/19 16:32:34 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/20 13:53:37 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (0);
 }
-/*
-int main()
-{
-	char	*s1 = "1234567890";
-	char	*s3 = "1234567890";
-	printf("%s\n", ft_strjoin(s1, s3));
-}*/

@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 16:35:43 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/15 13:24:30 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/21 13:26:39 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,13 +84,3 @@ char	*ft_strtrim(char const *s, char const *set)
 	}
 	return (0);
 }
-/*
-int main()
-{
-	char *s = "acbababab hola me llamo ababiabab";
-	char *se = "abc           ";
-
-	printf("%s\n", s);
-	printf("%s\n", se);
-	printf("%s\n", ft_strtrim(s, se));
-}*/

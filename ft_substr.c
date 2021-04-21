@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 13:27:13 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/19 16:33:45 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/04/20 11:54:52 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int main()
-{
-	char *a = "i just want this part #############";
-
-	printf("%s\n", ft_substr(a, 5, 20));
-}*/
