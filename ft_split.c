@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 17:30:23 by vifernan          #+#    #+#             */
-/*   Updated: 2021/04/21 15:39:57 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/11/29 16:32:51 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_str(char c, const char *s, size_t i)
 	return (str);
 }
 
-size_t	ft_Tabsize(char const *s, char c)
+size_t	ft_tabsize(char const *s, char c)
 {
 	size_t	i;
 	size_t	z;
