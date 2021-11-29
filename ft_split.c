@@ -6,7 +6,7 @@
 /*   By: vifernan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 17:30:23 by vifernan          #+#    #+#             */
-/*   Updated: 2021/11/29 16:32:51 by vifernan         ###   ########.fr       */
+/*   Updated: 2021/11/29 19:47:12 by vifernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	tab = ft_calloc((ft_Tabsize(s, c) + 1), sizeof(char *));
+	tab = ft_calloc((ft_tabsize(s, c) + 1), sizeof(char *));
 	if (!tab)
 		return (0);
 	i = 0;
@@ -90,7 +90,7 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		size = 0;
-		if (t < ft_Tabsize(s, c))
+		if (t < ft_tabsize(s, c))
 		{
 			tab[t++] = ft_str(c, s, i);
 			i = ft_returni(c, s, i);
